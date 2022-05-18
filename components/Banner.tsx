@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type Props = {
   preview: boolean;
 };
@@ -8,23 +10,21 @@ export const Banner = ({ preview }: Props) => {
       {preview ? (
         <>
           This is page is showing draft content.{" "}
-          <a
-            href="/api/exit-preview"
-            className="underline transition-colors duration-300 hover:text-emerald-500"
-          >
-            Click here
-          </a>{" "}
+          <Link href="/api/exit-preview" prefetch={false}>
+            <a className="underline transition-colors duration-300 hover:text-emerald-500">
+              Click here
+            </a>
+          </Link>{" "}
           to exit preview mode.
         </>
       ) : (
         <>
           This is page is showing published content.{" "}
-          <a
-            href="/api/preview"
-            className="underline transition-colors duration-300 hover:text-emerald-500"
-          >
-            Click here
-          </a>{" "}
+          <Link href="/api/preview" prefetch={false}>
+            <a className="underline transition-colors duration-300 hover:text-emerald-500">
+              Click here
+            </a>
+          </Link>{" "}
           to enter preview mode.
         </>
       )}
