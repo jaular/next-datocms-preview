@@ -31,7 +31,7 @@ const PostPage: NextPage<Props> = ({ post }) => {
               default:
                 return (
                   <>
-                    <p>Don't know how to render a block!</p>
+                    <p>Do not know how to render a block!</p>
                     <pre>{JSON.stringify(record, null, 2)}</pre>
                   </>
                 );
