@@ -2,16 +2,16 @@ import type { ResponsiveImageProps } from "lib/types";
 import Image from "next/image";
 
 type Props = {
-  title: string;
   image: ResponsiveImageProps;
 };
 
-export const ResponsiveImage = ({ title, image }: Props) => {
+export const ResponsiveImage = ({ image }: Props) => {
   return (
     <Image
+      className="rounded"
       src={image.src}
-      alt={title}
-      title={title}
+      alt={image.alt}
+      title={image.alt}
       width={image.width}
       height={image.height}
       placeholder="blur"

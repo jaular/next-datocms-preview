@@ -49,7 +49,7 @@ export const Container = (props: Props) => {
         <meta name="twitter:image" content={meta.image} />
       </Head>
 
-      <main className="flex-grow px-4 mx-auto my-10 antialiased max-w-7xl sm:px-6 md:my-12 lg:px-8">
+      <main className="flex-grow max-w-5xl px-4 mx-auto my-10 antialiased sm:px-6 md:my-12 lg:px-8">
         {children}
       </main>
     </>

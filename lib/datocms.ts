@@ -1,6 +1,10 @@
 import { GraphQLClient } from "graphql-request";
 
-export const graphqlRequest = async (query: string, preview: boolean) => {
+export const graphqlRequest = async (
+  query: string,
+  preview?: boolean,
+  variables?: {}
+) => {
   let endpoint = "https://graphql.datocms.com";
 
   if (preview) {
@@ -13,7 +17,7 @@ export const graphqlRequest = async (query: string, preview: boolean) => {
     },
   });
 
-  const data = await datocmsClient.request(query);
+  const data = await datocmsClient.request(query, variables);
 
   return data;
 };
