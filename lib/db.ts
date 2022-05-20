@@ -45,7 +45,7 @@ export const getPostBySlug = async (
             id
             image {
               responsiveImage(
-                imgixParams: { w: "1200", h: "600", fm: webp, fit: crop }
+                imgixParams: { w: "1200", h: "800", fm: webp, fit: crop }
               ) {
                 src
                 width
