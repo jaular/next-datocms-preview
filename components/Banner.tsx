@@ -11,7 +11,7 @@ const Banner = ({ preview }: Props) => {
         <>
           This is page is showing draft content.{" "}
           <Link href="/api/exit-preview" prefetch={false}>
-            <a className="underline transition-colors duration-300 hover:text-rose-600">
+            <a className="underline transition-colors duration-300 hover:text-emerald-600">
               Click here
             </a>
           </Link>{" "}
@@ -21,7 +21,7 @@ const Banner = ({ preview }: Props) => {
         <>
           This is page is showing published content.{" "}
           <Link href="/api/preview" prefetch={false}>
-            <a className="underline transition-colors duration-300 hover:text-rose-600">
+            <a className="underline transition-colors duration-300 hover:text-emerald-600">
               Click here
             </a>
           </Link>{" "}
