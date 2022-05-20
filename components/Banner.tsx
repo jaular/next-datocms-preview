@@ -6,7 +6,7 @@ type Props = {
 
 const Banner = ({ preview }: Props) => {
   return (
-    <div className="mb-8 text-base font-semibold text-center text-gray-900">
+    <div className="mb-8 text-base text-center text-gray-900">
       {preview ? (
         <>
           This is page is showing draft content.{" "}
