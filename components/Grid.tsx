@@ -1,11 +1,11 @@
 import type { CardPostProps } from "lib/types";
-import { Card } from "components";
+import Card from "~/components/Card";
 
 type Props = {
   posts: CardPostProps[];
 };
 
-export const Grid = ({ posts }: Props) => {
+const Grid = ({ posts }: Props) => {
   return (
     <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3">
       {posts.map((post) => (
@@ -20,3 +20,5 @@ export const Grid = ({ posts }: Props) => {
     </div>
   );
 };
+
+export default Grid;

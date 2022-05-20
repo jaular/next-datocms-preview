@@ -1,8 +1,10 @@
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import type { PostProps } from "lib/types";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { getAllPostsSlug, getPostBySlug } from "lib/db";
-import { Container, ResponsiveImage } from "components";
+import Container from "~/components/Container";
+const ResponsiveImage = dynamic(() => import("~/components/ResponsiveImage"));
 import { StructuredText } from "react-datocms";
 
 type Props = {
@@ -69,8 +71,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
       },
     };
   }
-
-  console.log(post);
 
   return {
     props: {

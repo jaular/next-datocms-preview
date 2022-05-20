@@ -9,7 +9,7 @@ type Props = {
   children?: ReactNode;
 };
 
-export const Container = (props: Props) => {
+const Container = (props: Props) => {
   const { children, ...customMeta } = props;
   const router = useRouter();
 
@@ -55,3 +55,5 @@ export const Container = (props: Props) => {
     </>
   );
 };
+
+export default Container;

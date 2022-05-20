@@ -5,7 +5,7 @@ type Props = {
   image: ResponsiveImageProps;
 };
 
-export const ResponsiveImage = ({ image }: Props) => {
+const ResponsiveImage = ({ image }: Props) => {
   return (
     <Image
       className="rounded"
@@ -19,3 +19,5 @@ export const ResponsiveImage = ({ image }: Props) => {
     />
   );
 };
+
+export default ResponsiveImage;

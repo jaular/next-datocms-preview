@@ -1,13 +1,8 @@
 import type { CardPostProps } from "lib/types";
 import Link from "next/link";
-import { ResponsiveImage } from "components";
+import ResponsiveImage from "~/components/ResponsiveImage";
 
-export const Card = ({
-  slug,
-  title,
-  description,
-  coverImage,
-}: CardPostProps) => {
+const Card = ({ slug, title, description, coverImage }: CardPostProps) => {
   return (
     <Link key={slug} href={`/posts/${slug}`}>
       <a className="group">
@@ -18,3 +13,5 @@ export const Card = ({
     </Link>
   );
 };
+
+export default Card;

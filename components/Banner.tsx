@@ -4,7 +4,7 @@ type Props = {
   preview: boolean;
 };
 
-export const Banner = ({ preview }: Props) => {
+const Banner = ({ preview }: Props) => {
   return (
     <div className="mb-8 text-base font-semibold text-center text-gray-900">
       {preview ? (
@@ -31,3 +31,5 @@ export const Banner = ({ preview }: Props) => {
     </div>
   );
 };
+
+export default Banner;

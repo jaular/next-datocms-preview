@@ -1,7 +1,9 @@
 import type { GetStaticProps, NextPage } from "next";
 import type { CardPostProps } from "lib/types";
 import { getAllPosts } from "lib/db";
-import { Container, Grid, Banner } from "components";
+import Container from "~/components/Container";
+import Grid from "~/components/Grid";
+import Banner from "~/components/Banner";
 
 type Props = {
   posts: CardPostProps[];
