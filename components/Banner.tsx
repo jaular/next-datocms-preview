@@ -1,30 +1,38 @@
-import Link from "next/link";
+import { useRouter } from "next/router";
 
 type Props = {
   preview: boolean;
 };
 
 const Banner = ({ preview }: Props) => {
+  const router = useRouter();
+
+  const handleClick = (href: string) => {
+    router.push(href);
+  };
+
   return (
     <div className="mb-8 text-base text-center text-gray-900">
       {preview ? (
         <>
           This is page is showing draft content.{" "}
-          <Link href="/api/exit-preview" prefetch={false}>
-            <a className="underline transition-colors duration-300 hover:text-emerald-600">
-              Click here
-            </a>
-          </Link>{" "}
+          <a
+            className="underline transition-colors duration-300 cursor-pointer hover:text-emerald-600"
+            onClick={() => handleClick("/api/exit-preview")}
+          >
+            Click here
+          </a>{" "}
           to exit preview mode.
         </>
       ) : (
         <>
           This is page is showing published content.{" "}
-          <Link href="/api/preview" prefetch={false}>
-            <a className="underline transition-colors duration-300 hover:text-emerald-600">
-              Click here
-            </a>
-          </Link>{" "}
+          <a
+            className="underline transition-colors duration-300 cursor-pointer hover:text-emerald-600"
+            onClick={() => handleClick("/api/preview")}
+          >
+            Click here
+          </a>{" "}
           to enter preview mode.
         </>
       )}
