@@ -6,6 +6,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const url = slug ? slug : "/";
   res.clearPreviewData();
 
-  res.writeHead(307, { Location: url });
+  console.log(url);
+
+  // res.writeHead(307, { Location: url });
+  res.redirect(url as string);
   res.end("Preview mode disabled");
 }
