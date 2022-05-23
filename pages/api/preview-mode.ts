@@ -3,7 +3,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const secret = process.env.DATOCMS_PREVIEW_SECRET;
-  const { slug } = req.query;
+  const { slug } = req.query as { slug: string };
   const url = slug ? slug : "/";
 
   if (secret && req.query.secret !== process.env.DATOCMS_PREVIEW_SECRET) {
@@ -17,5 +17,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
   );
 
-  res.redirect(url as string);
+  res.redirect(url);
 }

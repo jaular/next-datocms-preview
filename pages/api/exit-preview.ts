@@ -2,9 +2,9 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { slug } = req.query;
+  const { slug } = req.query as { slug: string };
   const url = slug ? slug : "/";
   res.clearPreviewData();
 
-  res.redirect(url as string);
+  res.redirect(url);
 }
