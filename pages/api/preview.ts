@@ -5,7 +5,7 @@ export default function handler(_req: unknown, res: NextApiResponse) {
   res.setPreviewData(
     {},
     {
-      maxAge: 60 * 2, // The preview mode cookies expire in 2 minutes
+      maxAge: 20, // The preview mode cookies expire in 20 seconds
     }
   );
 
