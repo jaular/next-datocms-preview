@@ -8,6 +8,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   console.log(url);
 
-  res.writeHead(301, { Location: slug });
-  res.redirect(url as string);
+  res.redirect(slug as string);
 }

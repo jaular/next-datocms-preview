@@ -17,6 +17,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
   );
 
-  res.writeHead(301, { Location: url });
-  res.end("Preview mode enabled");
+  res.redirect(slug as string);
 }
