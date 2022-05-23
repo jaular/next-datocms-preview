@@ -3,7 +3,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const secret = process.env.DATOCMS_PREVIEW_SECRET;
-  let slug = req.query.slug ? req.query.slug : "/";
+  const { slug = "" } = req.query as { slug: string };
 
   if (secret && req.query.secret !== process.env.DATOCMS_PREVIEW_SECRET) {
     return res.status(401).json({ message: "Invalid token" });
@@ -16,6 +16,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
   );
 
-  res.writeHead(307, { Location: slug });
+  // res.writeHead(307, { Location: slug });
+  res.redirect(slug);
   res.end("Preview mode enabled");
 }
