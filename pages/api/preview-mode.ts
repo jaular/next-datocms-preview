@@ -3,7 +3,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const secret = process.env.DATOCMS_PREVIEW_SECRET;
-  const slug = req.query.slug;
+  let slug = req.query.slug ? req.query.slug : "/";
 
   if (secret && req.query.secret !== process.env.DATOCMS_PREVIEW_SECRET) {
     return res.status(401).json({ message: "Invalid token" });
