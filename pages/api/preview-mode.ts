@@ -17,5 +17,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
   );
 
-  res.redirect(slug as string);
+  res.redirect(url as string);
 }

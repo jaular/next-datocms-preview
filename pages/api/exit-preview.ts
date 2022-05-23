@@ -6,7 +6,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const url = slug ? slug : "/";
   res.clearPreviewData();
 
-  console.log(url);
-
-  res.redirect(slug as string);
+  res.redirect(url as string);
 }
