@@ -1,10 +1,10 @@
-import type { CardPostProps, PostProps } from "lib/types";
+import type { AllPostProps, PostProps } from "lib/types";
 import { graphqlRequest } from "lib/datocms";
 import { gql } from "graphql-request";
 
 export const getAllPosts = async (
   preview: boolean
-): Promise<CardPostProps[]> => {
+): Promise<AllPostProps[]> => {
   const ALLPOSTS_QUERY = gql`
     {
       allPosts(orderBy: _createdAt_DESC) {

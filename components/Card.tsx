@@ -1,8 +1,8 @@
-import type { CardPostProps } from "lib/types";
+import type { AllPostProps } from "lib/types";
 import Link from "next/link";
 import ResponsiveImage from "~/components/ResponsiveImage";
 
-const Card = ({ slug, title, description, coverImage }: CardPostProps) => {
+const Card = ({ slug, title, description, coverImage }: AllPostProps) => {
   return (
     <Link key={slug} href={`/posts/${slug}`}>
       <a className="group">

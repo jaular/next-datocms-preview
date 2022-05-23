@@ -13,7 +13,7 @@ export type ResponsiveImageProps = {
   base64: string;
 };
 
-export type CardPostProps = {
+export type AllPostProps = {
   title: string;
   slug: string;
   description: string;

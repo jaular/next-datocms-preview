@@ -1,8 +1,8 @@
-import type { CardPostProps } from "lib/types";
+import type { AllPostProps } from "lib/types";
 import Card from "~/components/Card";
 
 type Props = {
-  posts: CardPostProps[];
+  posts: AllPostProps[];
 };
 
 const Grid = ({ posts }: Props) => {
