@@ -2,9 +2,10 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { slug = "" } = req.query as { slug: string };
+  const { slug } = req.query;
+  const url = slug ? slug : "/";
   res.clearPreviewData();
 
-  res.writeHead(307, { Location: slug });
+  res.writeHead(307, { Location: url });
   res.end("Preview mode disabled");
 }
