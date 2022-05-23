@@ -15,7 +15,7 @@ const PostPage: NextPage<Props> = ({ post }) => {
   return (
     <Container>
       <Link href="/">
-        <a className="text-green-500">Back to home</a>
+        <a className="text-green-600">Back to home</a>
       </Link>
       <h1 className="mt-4 text-4xl font-bold text-gray-900">{post.title}</h1>
 
