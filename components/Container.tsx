@@ -31,11 +31,11 @@ const Container = (props: Props) => {
         <meta content={meta.description} name="description" />
         <meta
           property="og:url"
-          content={`https://next-datocms.vercel.app${meta.currentPage}`}
+          content={`https://next-datocms-preview.vercel.app${meta.currentPage}`}
         />
         <link
           rel="canonical"
-          href={`https://next-datocms.vercel.app${meta.currentPage}`}
+          href={`https://next-datocms-preview.vercel.app${meta.currentPage}`}
         />
         <meta property="og:type" content={meta.type} />
         <meta property="og:site_name" content="Next" />
