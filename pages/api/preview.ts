@@ -6,7 +6,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(401).json({ message: "Invalid token" });
   }
 
-  res.setPreviewData({});
+  res.setPreviewData(
+    {},
+    {
+      maxAge: 60 * 2, // The preview mode cookies expire in 2 minutes
+    }
+  );
 
   res.writeHead(307, { Location: "/" });
   res.end("Preview mode enabled");
